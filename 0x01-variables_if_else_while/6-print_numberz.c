@@ -4,21 +4,21 @@
 
 #include <time.h>
 
-
 /**
- * main - A program that prints single digit numbers
+ * main - A program that prints all single digits numbers
  * Return: Always 0 (Success)
+ *
  */
+
 
 int main(void)
 
 {
+	int d;
 
-	int i;
-
-	for (i = 0; i < 10; i++)
-	printf("%d", i);
-	printf("\n");
+	for (d = '0'; d <= '9'; d++)
+	putchar(d);
+	putchar('\n');
 
 	return (0);
 
