@@ -1,10 +1,10 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
+#include <string.h>
 
 /**
- * main - Prints the multiplication of two args numbers
+ * main - Prints the sum of args positive numbers
  * @argc: argument count
  * @argv: argument vector
  * Return: Always 0.
@@ -12,30 +12,32 @@
 
 int main(int argc, char *argv[])
 {
+	int i;
+	unsigned int k, sum = 0;
+	char *e;
 
-	if (argc == 1)
+	if (argc > 1)
 	{
-		printf("0\n");
-	return (0);
-	}
-int total = 0;
-for (int i = 1; i < argc; i++)
-{
-	char *num = argv[i];
-	int j = 0;
-
-	while (num[j] != '\0')
-	
-	{
-			if (!isdigit(num[j]))
+		for (i = 1; i < argc; i++)
+		{
+			e = argv[i];
+			for (k = 0; k < strlen(e); k++)
 			{
-				printf("Error\n");
-				return (1);
+				if (e[k] < 48 || e[k] > 57)
+				{
+					printf("Error\n");
+					return (1);	
 			}
-			j++;
 			}
-	total += atoi(num);
-}
-printf("%d\n", total);
-return (0);
+			sum += atoi(e);
+			e++;
+			}
+
+			printf("%d\n", sum);
+		}
+		else
+		{
+			printf("0\n");
+		}
+		return (0);
 }
