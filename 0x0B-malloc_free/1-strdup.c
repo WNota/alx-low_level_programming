@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * _strdrp - Duplicate a string
+ * _strdup - Duplicate a string
  * @str: the string to duplicate
  *
  * Return: the string duplicated
@@ -25,7 +25,7 @@ char *_strdup(char *str)
 	if (s == NULL)
 		return (NULL);
 	while (a < i)
-	{ 
+	{
 		s[a] = str[a];
 		a++;
 	}
