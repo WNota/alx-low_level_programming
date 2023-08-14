@@ -10,8 +10,8 @@ char *_strcpy(char *dest, char *src);
  * @name: The name of the dog
  * @age: age of the dog
  * @owner: owner of the dog
- * Return: NULL if fails
  *
+ * Return: NULL if fails
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
@@ -21,8 +21,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (name != NULL && owner != NULL)
 	{
-		name_l = strlen(name) + 1;
-		own_l = strlen(owner) + 1;
+		name_l = _strlen(name) + 1;
+		own_l = _strlen(owner) + 1;
 		max_dog = malloc(sizeof(dog_t));
 
 		if (max_dog == NULL)
